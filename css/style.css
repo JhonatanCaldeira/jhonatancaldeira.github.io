@@ -14,7 +14,8 @@
     --border-color: #999;
     --bio-bg-color: #1e2a3a;
     --bio-border-color: #293544;
-    --about-bg-color: #111821;
+    --about-bg-color: #212d3e;
+    /*--about-bg-color: #111821;*/
 }
 
 /* General */
@@ -27,20 +28,27 @@
     display: flex;
     flex-direction: row;
     color: var(--main-text-color);
+    justify-content: flex-end;
+    min-height: 90vh;
+}
+
+#left-container {
+    flex: 1 1 10%;
+    background-color: var(--about-bg-color);
+    padding: 30px 12px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
 #bio-container {
-    flex: 1 1 20%;
-    min-height: 100vh;
-    background-color: var(--bio-bg-color);
-    text-align: center;
+    background-color: var(--about-bg-color);
     padding: 30px 12px;
-    border-right: 5px solid var(--bio-border-color);
+    display: flex;
+    justify-content: space-between;
 }
 
 #about-container {
-    flex: 1 1 80%;
-    min-height: 100vh;
+    flex: 1 1 70%;
     background-color: var(--about-bg-color);
     padding: 50px;
 }
@@ -66,11 +74,19 @@
     margin-bottom: 25px;
 }
 
-#social-container {
+#circle {
+    float: left;
+    width: 180px;
+    height: 180px;
+    shape-outside: circle();
+    clip-path: circle();
+    background: var(--main-color);
+}
+
+#social-container { 
     display: flex;
     justify-content: center;
     list-style: none;
-    border-bottom: 1px solid var(--border-color);
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
@@ -110,7 +126,7 @@
 
 /* about container */
 #name {
-    font-size: 42px;
+    font-size: 80px;
     margin-bottom: 15px;
 }
 
@@ -121,8 +137,9 @@
 }
 
 .description {
-    max-width: 75%;
+    max-width: 90%;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 #btn-projects {
@@ -155,23 +172,27 @@
     background-color: transparent;
 }
 
+#skills-container {
+    flex: 1 1 20%;
+    background-color: var(--about-bg-color);
+    padding: 40px 12px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+
 #skills-section-title {
-    border-top: 1px solid var(--border-color);
     padding-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
 }
 
-#skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 25px
+.skills-box {
+    margin-bottom: 35px;
 }
 
-.skills-box {
-    flex: 1 1 33%;
-    max-width: 33%;
-    margin-bottom: 35px;
+.skills-box a{
+    text-decoration: none;
 }
 
 .skills-title {
@@ -220,14 +241,39 @@
         line-height: 26px;
     }
 
+    #name {
+        font-size: 75px;
+        text-align: left;
+    }
+
+    #title {
+        text-align: left;
+    }
+
+    .description {
+        max-width: 90%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
     #btn-projects {
         margin: 20px auto;
+        position:fixed;
+        bottom:40px;
+        right:40px;
+        box-shadow: 2px 2px 3px #999;
+        z-index:100;
+    }
+
+    #btn-projects:hover {
+        background-color: transparent;
     }
 
     .skills-box {
         flex: 1 1 100%;
         max-width: 100%;
         margin-bottom: 40px;
+        margin-left: 15px;
         text-align: left;
     }
     .skills-box {
