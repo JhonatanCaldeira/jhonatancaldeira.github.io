@@ -66,7 +66,19 @@
     margin-bottom: 25px;
 }
 
-#social-container {
+/* Ellipse 1 */
+#bio-image-elipse {
+    position: absolute;
+    width: 173.88px;
+    height: 173.88px;
+    left: 306.96px;
+    top: 172.12px;
+    
+    background: var(--main-color);
+}
+
+
+#social-container { 
     display: flex;
     justify-content: center;
     list-style: none;
@@ -155,22 +167,31 @@
     background-color: transparent;
 }
 
+#skills-container {
+    flex: 1 1 30%;
+    min-height: 100vh;
+    background-color: var(--about-bg-color);
+    padding: 30px 12px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
 #skills-section-title {
     border-top: 1px solid var(--border-color);
     padding-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
 }
-
+/*
 #skills-container {
     display: flex;
     flex-wrap: wrap;
     margin-top: 25px
-}
+}*/
 
 .skills-box {
-    flex: 1 1 33%;
-    max-width: 33%;
+    flex: 1 1 100%;
+    max-width: 100%;
     margin-bottom: 35px;
 }
 
