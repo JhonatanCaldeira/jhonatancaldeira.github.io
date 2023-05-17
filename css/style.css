@@ -14,7 +14,8 @@
     --border-color: #999;
     --bio-bg-color: #1e2a3a;
     --bio-border-color: #293544;
-    --about-bg-color: #111821;
+    --about-bg-color: #212d3e;
+    /*--about-bg-color: #111821;*/
 }
 
 /* General */
@@ -73,17 +74,14 @@
     margin-bottom: 25px;
 }
 
-/* Ellipse 1 */
-#bio-image-elipse {
-    position: absolute;
-    width: 173.88px;
-    height: 173.88px;
-    left: 306.96px;
-    top: 172.12px;
-    
+#circle {
+    float: left;
+    width: 180px;
+    height: 180px;
+    shape-outside: circle();
+    clip-path: circle();
     background: var(--main-color);
 }
-
 
 #social-container { 
     display: flex;
@@ -192,6 +190,10 @@
     margin-bottom: 35px;
 }
 
+.skills-box a{
+    text-decoration: none;
+}
+
 .skills-title {
     font-size: 24px;
     margin-bottom: 25px;
@@ -238,14 +240,31 @@
         line-height: 26px;
     }
 
+    #name {
+        font-size: 75px;
+        text-align: left;
+    }
+
+    #title {
+        text-align: left;
+    }
+
+    .description {
+        max-width: 90%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
     #btn-projects {
         margin: 20px auto;
     }
+
 
     .skills-box {
         flex: 1 1 100%;
         max-width: 100%;
         margin-bottom: 40px;
+        margin-left: 15px;
         text-align: left;
     }
     .skills-box {
