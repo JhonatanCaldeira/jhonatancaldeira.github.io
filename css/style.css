@@ -126,7 +126,7 @@
 
 /* about container */
 #name {
-    font-size: 90px;
+    font-size: 80px;
     margin-bottom: 15px;
 }
 
@@ -139,6 +139,7 @@
 .description {
     max-width: 90%;
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 #btn-projects {
