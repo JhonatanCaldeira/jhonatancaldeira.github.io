@@ -94,6 +94,7 @@
 #social-container li{
     flex: 1 1 0;
     max-width: 60px;
+    padding-left: 10px;
 }
 
 #social-container li a{
@@ -193,6 +194,10 @@
 
 .skills-box a{
     text-decoration: none;
+}
+
+.skills-box a:link, a:visited, a:hover, a:active{
+    color: white;
 }
 
 .skills-title {
